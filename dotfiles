@@ -21,11 +21,11 @@ die() {
 }
 
 do_file_list() {
-	find .dotfiles* -type f | grep -v -e '~$' -e '\/\.' -e '^\.dotfiles\/dotfiles$' -e '^\.dotfiles\/README.markdown$' -e ':'
+	find .dotfiles* -type f | grep -v -e '~$' -e '\/\.' -e '^\.dotfiles\/dotfiles$' -e '^\.dotfiles\/README.markdown$' | sed 's/:.*$//' | sort -u
 }
 
 do_list() {
-	find .dotfiles* -type f | cut -d / -f 2- | grep -v -e '~$' -e '^\.' -e '^dotfiles$' -e '^README.markdown$' -e ':'
+	find .dotfiles* -type f | cut -d / -f 2- | grep -v -e '~$' -e '^\.' -e '^dotfiles$' -e '^README.markdown$' | sed 's/:.*$//' | sort -u
 }
 
 do_status_of() {

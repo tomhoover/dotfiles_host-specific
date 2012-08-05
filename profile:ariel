@@ -1,0 +1,5 @@
+# source default ~/.profile
+. "$HOME/.dotfiles/profile"
+
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
