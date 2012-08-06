@@ -13,5 +13,8 @@
 [color]
 	ui = true
 [alias]
+	br = branch
+	ci = commit
+	co = checkout
 	st = status -s
 	lol = log --oneline --graph --decorate
