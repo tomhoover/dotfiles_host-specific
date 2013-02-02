@@ -3,7 +3,7 @@
 	email = tom@hisword.net
 [core]
 	excludesfile = /Users/tom/.gitignore_global
-	autocrlf = input
+	autocrlf = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
