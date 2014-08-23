@@ -18,3 +18,8 @@
 	co = checkout
 	st = status -s
 	lol = log --oneline --graph --decorate
+	# update (fetch) remotes
+	up = remote update
+[merge]
+	ff = false
+	conflictstyle = diff3
