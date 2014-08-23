@@ -1,5 +1,9 @@
 # source default ~/.bashrc
-. "$HOME/.dotfiles/bashrc"
+. "${HOME}/.dotfiles/bashrc"
+
+# setup virtualenvwrapper
+export WORKON_HOME=${HOME}/.virtualenvs
+. /usr/local/bin/virtualenvwrapper.sh
 
 # load git-prompt
 [[ $- == *i* ]] && . ${HOME}/src/git-prompt/git-prompt.sh
@@ -9,6 +13,12 @@ export CLICOLOR=true
 
 # my favorite editor
 export EDITOR=vim
+
+# usage hazelCheck inputFile > outputFile
+alias hazelCheck=/Library/PreferencePanes/Hazel.prefPane/Contents/Resources/hazelimporter
+
+# get WAN IP address
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # Set Finder label color
 #   http://stackoverflow.com/questions/2435580/tagging-files-with-colors-in-os-x-finder-from-shell-scripts
