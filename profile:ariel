@@ -1,5 +1,20 @@
 # source default ~/.profile
 . "$HOME/.dotfiles/profile"
 
+# duply
+ulimit -n 1024
+
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#Homebrew's own bash completion script has been installed to
+#  /usr/local/etc/bash_completion.d
+#Bash completion has been installed to:
+#  /usr/local/etc/bash_completion.d
+# add the following lines to your ~/.bash_profile to enable bash_completion:
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"
