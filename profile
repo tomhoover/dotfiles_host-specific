@@ -9,7 +9,8 @@
 #umask 022
 
 # start keychain
-keychain -q id_dsa id_rsa
+#keychain -q id_dsa id_rsa
+keychain -q id_rsa
 # . ~/.keychain/`uname -n`-sh
 
 # if running bash
@@ -23,6 +24,11 @@ fi
 # set PATH so it includes /usr/local/bin, if it exists
 if [ -d "/usr/local/bin" ] ; then
     PATH="/usr/local/bin:$PATH"
+fi
+
+# set PATH so it includes /usr/local/sbin, if it exists
+if [ -d "/usr/local/sbin" ] ; then
+    PATH="/usr/local/sbin:$PATH"
 fi
 
 # set PATH so it includes user's private bin, if it exists
